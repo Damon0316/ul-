@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-3">
+    <div class="col-lg-8 select_container">
+      <div class="dropdown_container">
+        <input class="dropdown" type="text" [(ngModel)]="searchObj.boxSpan"  readonly="true" (click)="onClick($event)"/>
+        <div class="down" (click)="onClick($event)"></div>
+        <ul id="selectBox" #selectBox>
+          <li><input class = "maxWidth" type="checkbox" [(ngModel)]="searchObj.nofilter" value="No Filter" (click)="selectNofilter()">No Filter</li>
+          <li><input class = "maxWidth" type="checkbox" [(ngModel)]="searchObj.com" value=".COM" (click)="selectCom()">.COM</li>
+          <li><input class = "maxWidth" type="checkbox" [(ngModel)]="searchObj.b2b" value="B2B" (click)="selectB2b()">B2B</li>
+          <li><input class = "maxWidth" type="checkbox" [(ngModel)]="searchObj.ca" value=".CA" (click)="selectCa()">.CA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
